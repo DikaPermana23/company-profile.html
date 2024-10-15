@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,175 +8,325 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Aplikasi Donasi</a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fffffff0;">
+    <a class="navbar-brand" href="#">Cahaya Kebaikan</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#about">Tentang Kami</a>
+        <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#beranda">Beranda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#program-donasi">Program Donasi</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#features">Fitur</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#about">Tentang Kami</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contact">Kontak</a>
+            </li>
+            <!-- Tombol Login Berbeda -->
+            <li class="nav-item ml-3">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">
+                    <button class="btn btn-dark rounded-pill px-4 py-2 text-white" style="font-weight: bold;">Login</button>
+                </a>
             </li>
         </ul>
     </div>
 </nav>
 
-<!-- Hero Section with Background Image -->
-<section class="hero-section">
-    <div>
-        <h2>Aplikasi Manajemen Donasi</h2>
-        <p>Solusi digital untuk mempermudah pengelolaan dana sumbangan sosial</p>
-    </div>
-</section>
-
-<!-- Tentang Kami -->
-<section id="about" class="content-section">
-    <div class="container">
-        <h2 class="text-center">Tentang Aplikasi Manajemen Donasi</h2>
-        <p class="lead text-center">Aplikasi Manajemen Donasi adalah solusi digital yang didesain untuk mempermudah pengelolaan dana sumbangan bagi individu, organisasi, dan lembaga sosial. Dengan platform yang user-friendly dan transparansi penuh, kami berkomitmen untuk menciptakan pengalaman donasi yang lebih baik dan aman.</p>
-    </div>
-</section>
-
-<!-- Visi dan Misi -->
-<section id="visi-misi" class="content-section">
-    <div class="container">
-        <div class="visi-misi-container">
-            <!-- Visi -->
-            <div class="col-md-6" data-aos="fade-up">
-                <h3>Visi Kami</h3>
-                <p>Visi kami adalah menjadi platform donasi terpercaya yang mempermudah masyarakat dalam memberikan kontribusi mereka untuk tujuan sosial dan kemanusiaan. Kami bertekad menciptakan masa depan yang lebih baik dengan memberikan kemudahan bagi setiap individu untuk membantu sesama dengan cara yang efisien dan mudah.</p>
+<!-- Modal Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <!-- Misi -->
+            <div class="modal-body">
+                <!-- Form Login -->
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="username">Nama Pengguna</label>
+                        <input type="text" class="form-control" id="username" placeholder="Masukkan Nama Pengguna" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Kata Sandi</label>
+                        <input type="password" class="form-control" id="password" placeholder="Masukkan Kata Sandi" required>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Ingat saya</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    
+      
+    <!-- Hero Section with Background Image -->
+    <section id="beranda" class="container-fluid hero-section d-flex align-items-center">
+        <div class="row w-100">
+            <!-- Teks di sebelah kiri -->
+            <div class="col-md-6 hero-content">
+                <h2>Memberi Harapan, Menebar Kebaikan</h2>
+               <p>Solusi digital untuk memperkuat komunitas sosial melalui donasi yang lebih mudah, aman, dan transparan.</p>
+            </div>
+            <!-- Gambar di sebelah kanan (diubah urutannya di mobile) -->
+            <div class="col-md-6 hero-image order-md-1 order-2">
+                <img src="https://cdn1-production-images-kly.akamaized.net/jrKAphTlrszHtz5giChFSUgxFNk=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4317154/original/093303000_1675831393-Thumbnail_Liputan6.com-4.jpg" alt="Hero Image" class="img-fluid">
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Program Donasi -->
+    <section id="program-donasi" class="content-section py-5">
+        <div class="container">
+            <h2 class="text-center">Program Donasi Kami</h2>
+            <p class="text-center mb-5">Aplikasi Manajemen Donasi mendukung berbagai program sosial untuk membantu masyarakat yang membutuhkan. Berikut adalah beberapa program donasi yang kami jalankan:</p>
+            <div class="row">
+                <!-- Program 1: Bantuan Korban Bencana Alam -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card">
+                        <img src="https://img.inews.co.id/media/822/files/inews_new/2021/01/26/bantuan_bencanajpg.jpg" class="card-img-top" alt="Bantuan Korban Bencana Alam">
+                        <div class="card-body">
+                            <h5 class="card-title">Bantuan Korban Bencana Alam</h5>
+                            <p class="card-text">Kami memberikan bantuan darurat kepada korban bencana alam, termasuk makanan, pakaian, dan obat-obatan. Donasi Anda akan langsung disalurkan kepada mereka yang terdampak.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Program 2: Distribusi Kebutuhan Pokok -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <img src="https://cdn01.metrotvnews.com/dynamic/content/2024/01/17/kELCxRwy/a_65a72a3820f6e.webp?w=400" class="card-img-top" alt="Distribusi Kebutuhan Pokok">
+                        <div class="card-body">
+                            <h5 class="card-title">Distribusi Kebutuhan Pokok</h5>
+                            <p class="card-text">Program ini bertujuan untuk memastikan distribusi kebutuhan pokok seperti beras, minyak, dan bahan makanan lainnya kepada keluarga yang membutuhkan di berbagai wilayah.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Program 3: Pendidikan dan Beasiswa -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <img src="https://fahum.umsu.ac.id/blog/wp-content/uploads/2024/08/tata-cara-pendaftaran-beasiswa-pendidikan-indonesia-2024.jpeg" class="card-img-top" alt="Beasiswa Pendidikan">
+                        <div class="card-body">
+                            <h5 class="card-title">Pendidikan dan Beasiswa</h5>
+                            <p class="card-text">Melalui donasi Anda, kami dapat memberikan beasiswa kepada anak-anak yang berprestasi namun terbatas dalam segi ekonomi, untuk melanjutkan pendidikan yang lebih tinggi.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Program 4: Kesehatan dan Pengobatan -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <img src="https://asset-2.tstatic.net/papua/foto/bank/images/TMMD-di-Sarmi.jpg" class="card-img-top" alt="Kesehatan dan Pengobatan">
+                        <div class="card-body">
+                            <h5 class="card-title">Kesehatan dan Pengobatan</h5>
+                            <p class="card-text">Kami menyediakan akses layanan kesehatan bagi mereka yang tidak mampu. Termasuk biaya pengobatan, obat-obatan, dan alat medis untuk masyarakat miskin di daerah terpencil.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Program 5: Bantuan Kemanusiaan Internasional -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card">
+                        <img src="https://dmc.dompetdhuafa.org/wp-content/uploads/2022/10/21703-bantuan-kemanusiaan-untuk-pakistan.webp" class="card-img-top" alt="Bantuan Kemanusiaan Internasional">
+                        <div class="card-body">
+                            <h5 class="card-title">Bantuan Kemanusiaan Internasional</h5>
+                            <p class="card-text">Kami mendukung berbagai upaya bantuan kemanusiaan di seluruh dunia, seperti penyediaan makanan, obat-obatan, dan perlindungan bagi pengungsi dan korban perang.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Program 6: Infrastruktur dan Pembangunan Desa -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="card">
+                        <img src="https://www.sanspower.com/wp-content/uploads/2021/07/program-dana-desa-sanspower_dana_desa_artikel_8.png" class="card-img-top" alt="Infrastruktur dan Pembangunan Desa">
+                        <div class="card-body">
+                            <h5 class="card-title">Infrastruktur dan Pembangunan Desa</h5>
+                            <p class="card-text">Kami berkomitmen untuk memperbaiki kualitas hidup di desa-desa terpencil dengan membangun infrastruktur yang mendukung seperti jalan, jembatan, dan fasilitas umum lainnya, agar masyarakat dapat menikmati akses yang lebih baik.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur Aplikasi -->
+    <section id="features" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Fitur Aplikasi Manajemen Donasi</h2>
+            <p class="text-center mb-5">Aplikasi kami menawarkan berbagai fitur yang inovatif dan membantu donatur serta penerima manfaat. Fitur-fitur berikut dirancang untuk memberikan pengalaman donasi yang lebih efisien, aman, dan transparan.</p>
+            <div class="row">
+                <!-- Fitur 1: Pengumpulan Donasi -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card">
+                        <img src="https://www.megasyariah.co.id/bms-new/edukasi-tips/donasi_online.webp" class="card-img-top" alt="Fitur 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Pengumpulan Donasi Secara Online</h5>
+                            <p class="card-text">Donatur dapat memberikan kontribusi dengan mudah melalui berbagai metode pembayaran yang aman.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fitur 2: Pelaporan dan Transparansi -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <img src="https://mmc.tirto.id/image/otf/640x0/2019/12/02/istock-1023224298_ratio-16x9.jpg" class="card-img-top" class="card-img-top" alt="Fitur 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Pelaporan dan Transparansi</h5>
+                            <p class="card-text">Donatur dapat melihat laporan penggunaan dana yang telah diberikan, memastikan bahwa setiap donasi digunakan untuk tujuan yang tepat.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fitur 3: Akses dan Kontrol Pengguna -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_w9LVY95OjhPWtMEWYRB3DJzv2eULnzvotrYHFek4De_5EiQTabBFRigM5lLXbKBIl7w&usqp=CAU" class="card-img-top" alt="Fitur 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Akses dan Kontrol Pengguna</h5>
+                            <p class="card-text">Pengguna dapat mengatur akun dan melihat riwayat donasi yang telah dilakukan, dengan kemudahan akses melalui aplikasi mobile atau web.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+<section id="about" class="content-section py-5">
+    <div class="container">
+        <h2 class="text-center">Tentang Kami</h2>
+        <p class="text-center mb-5">Cahaya Kebaikan adalah aplikasi manajemen donasi yang bertujuan untuk memberikan solusi digital bagi individu dan organisasi yang ingin berkontribusi dalam kegiatan sosial. Kami percaya bahwa setiap kontribusi, sekecil apapun, dapat memberikan dampak yang besar bagi kehidupan mereka yang membutuhkan.</p>
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <h4>Visi Kami</h4>
+                <p>Menjadi platform terpercaya yang memfasilitasi donasi dan kegiatan sosial di seluruh dunia, dengan cara yang transparan dan aman.</p>
+            </div>
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <h3>Misi Kami</h3>
+                <h4>Misi Kami</h4>
                 <ul>
-                    <li>Menyediakan platform yang aman dan transparan untuk pengumpulan dana sosial.</li>
-                    <li>Mempermudah donatur dalam proses donasi melalui berbagai metode pembayaran yang praktis.</li>
-                    <li>Menyediakan laporan yang jelas dan dapat dipertanggungjawabkan kepada setiap donatur dan penerima manfaat.</li>
-                    <li>Membangun komunitas yang peduli dan berkomitmen terhadap kesejahteraan sosial melalui donasi.</li>
+                    <li>Meningkatkan kesadaran sosial melalui teknologi.</li>
+                    <li>Memastikan dana donasi digunakan untuk kepentingan yang tepat dan transparan.</li>
+                    <li>Memberikan kemudahan akses untuk semua pihak yang ingin berdonasi.</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Fitur Aplikasi -->
-<section id="features" class="bg-light py-5">
+<!-- Kontak -->
+<section id="contact" class="bg-light py-5">
     <div class="container">
-        <h2 class="text-center">Fitur Aplikasi Manajemen Donasi</h2>
-        <p class="text-center mb-5">Aplikasi kami menawarkan berbagai fitur yang inovatif dan membantu donatur serta penerima manfaat. Fitur-fitur berikut dirancang untuk memberikan pengalaman donasi yang lebih efisien, aman, dan transparan.</p>
-        <div class="row">
-            <!-- Fitur 1: Pengumpulan Donasi -->
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="card">
-                    <img src="https://www.megasyariah.co.id/bms-new/edukasi-tips/donasi_online.webp" class="card-img-top" alt="Fitur 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Pengumpulan Donasi Secara Online</h5>
-                        <p class="card-text">Donatur dapat memilih berbagai metode pembayaran yang tersedia untuk melakukan donasi dengan mudah dan aman. Aplikasi ini memfasilitasi donasi melalui transfer bank, kartu kredit, dan dompet digital.</p>
-                        <p class="card-text"><strong>Manfaat:</strong> Proses yang cepat dan mudah, memungkinkan siapa saja untuk berdonasi kapan saja tanpa batasan waktu atau tempat.</p>
-                    </div>
+        <h2 class="text-center">Kontak Kami</h2>
+        <p class="text-center mb-5">Jika Anda memiliki pertanyaan atau ingin bergabung dengan kami untuk mendukung berbagai program sosial, silakan hubungi kami melalui form di bawah ini atau informasi kontak yang kami sediakan.</p>
+        
+        <!-- Form Kontak -->
+        <form action="#" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Anda" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan Email Anda" required>
                 </div>
             </div>
-            <!-- Fitur 2: Laporan Transparan -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card">
-                    <img src="https://mmc.tirto.id/image/otf/640x0/2019/12/02/istock-1023224298_ratio-16x9.jpg" class="card-img-top" alt="Fitur 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Laporan Transparan dan Real-Time</h5>
-                        <p class="card-text">Donatur dapat melihat laporan donasi secara langsung dan memantau penggunaan dana secara transparan. Aplikasi ini memberikan update secara berkala agar donatur merasa yakin bahwa dana mereka digunakan dengan tepat.</p>
-                        <p class="card-text"><strong>Manfaat:</strong> Meningkatkan kepercayaan dan kenyamanan donatur dengan sistem pelaporan yang mudah dipahami.</p>
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Tuliskan pesan Anda" required></textarea>
             </div>
-            <!-- Fitur 3: Penerima Manfaat -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_w9LVY95OjhPWtMEWYRB3DJzv2eULnzvotrYHFek4De_5EiQTabBFRigM5lLXbKBIl7w&usqp=CAU" class="card-img-top" alt="Fitur 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Data Penerima Manfaat</h5>
-                        <p class="card-text">Setiap penerima manfaat tercatat dengan jelas dalam sistem kami, memudahkan verifikasi dan distribusi bantuan yang lebih terorganisir. Kami memastikan setiap bantuan disalurkan ke pihak yang benar-benar membutuhkan.</p>
-                        <p class="card-text"><strong>Manfaat:</strong> Penerima manfaat dapat langsung menerima bantuan yang sesuai dengan kebutuhan mereka tanpa penundaan atau kebingungan.</p>
-                    </div>
-                </div>
-            </div>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+        </form>
+        
+        <!-- Informasi Kontak -->
+        <div class="mt-5 text-center">
+            <p><strong>Email:</strong> <a href="mailto:info@cahayakebaikan.com">info@cahayakebaikan.com</a></p>
+            <p><strong>Telepon:</strong> +62********</p>
+            <p><strong>Alamat:</strong> Jl. Kebaikan No.123, Karawang, Indonesia</p>
         </div>
     </div>
 </section>
 
-<!-- Kontak -->
-<section id="contact" class="container mt-5">
-    <h2 class="text-center">Kontak Kami</h2>
-    <p class="text-center mb-4">Kami siap menjawab pertanyaan dan memberikan informasi lebih lanjut mengenai aplikasi manajemen donasi. Jangan ragu untuk menghubungi kami!</p>
-    <form>
-        <div class="form-group">
-            <label for="name">Nama Lengkap</label>
-            <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap Anda" required>
+
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Cahaya Kebaikan | Semua hak dilindungi.</p>
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Pesan</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Masukkan pesan Anda" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Kirim</button>
-    </form>
-</section>
-<br>
+    </footer>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2024 Dika Permana.</p>
-</footer>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
-<!-- Bootstrap JS dan AOS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-
-<script>
-    // Atur batasan jarak dimana navbar muncul atau menghilang
-    const navbar = document.querySelector('.navbar');
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY < lastScrollY) {
-            navbar.style.top = '0'; // Navbar muncul saat scroll ke atas
-        } else if (window.scrollY > 100) {
-            navbar.style.top = '-80px'; // Navbar sembunyi saat scroll ke bawah, ubah -80px sesuai tinggi navbar
-        }
-        lastScrollY = window.scrollY;
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (e.clientY <= 100) {
-            navbar.style.top = '0'; // Navbar muncul saat kursor mendekat
-        } else {
-            if (window.scrollY > 100) {
-                navbar.style.top = '-80px'; // Navbar sembunyi saat kursor menjauh dan halaman di-scroll
+    <script>
+        // Variabel untuk melacak posisi scroll sebelumnya
+        let lastScrollTop = 0;
+    
+        // Mendapatkan referensi ke navbar
+        const navbar = document.querySelector('.navbar');
+    
+        // Menambahkan event listener untuk scroll
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+            // Jika scroll ke bawah
+            if (currentScroll > lastScrollTop) {
+                // Sembunyikan navbar
+                navbar.classList.remove('navbar-visible');
+                navbar.classList.add('navbar-hidden');
+            } else {
+                // Tampilkan navbar
+                navbar.classList.remove('navbar-hidden');
+                navbar.classList.add('navbar-visible');
             }
-        }
-    });
-</script>
-
-
+    
+            // Update posisi scroll terakhir
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    
+        // Menambahkan event listener untuk hover pada navbar
+        navbar.addEventListener('mouseover', function() {
+            navbar.classList.remove('navbar-hidden');
+            navbar.classList.add('navbar-visible');
+        });
+    
+        navbar.addEventListener('mouseout', function() {
+            if (window.pageYOffset > 0) { // Jangan sembunyikan navbar jika halaman di atas
+                navbar.classList.remove('navbar-visible');
+                navbar.classList.add('navbar-hidden');
+            }
+        });
+    </script>
+    
 </body>
 </html>

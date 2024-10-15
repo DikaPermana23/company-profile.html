@@ -3,40 +3,95 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Navbar */
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: top 0.3s ease; /* Efek transisi saat navbar sembunyi */
 }
-
-
-/* Hero Section */
-.hero-section {
-    position: relative;
-    background-image: url('https://cdn1-production-images-kly.akamaized.net/jrKAphTlrszHtz5giChFSUgxFNk=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4317154/original/093303000_1675831393-Thumbnail_Liputan6.com-4.jpg'); /* Gambar sebagai background */
-    background-size: cover;
-    background-position: center;
-    height: 400px; /* Atur tinggi sesuai kebutuhan */
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.navbar-nav .nav-item.active .nav-link {
+    background-color: transparent !important; /* pastikan latar belakang tidak berubah */
+    color: #737678; /* sesuaikan warna teks jika perlu */
+}
+/* Navbar yang hilang saat scroll ke bawah */
+.navbar-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Navbar yang terlihat */
+.navbar-visible {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Default CSS untuk layar besar (desktop) */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Section setinggi layar */
+    padding: 0 20px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%; /* Konten teks maksimal 50% lebar layar */
+    padding-right: 20px; /* Jarak antara teks dan gambar */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CSS untuk tampilan mobile (layar kecil) */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column; /* Elemen menjadi satu kolom di mobile */
+        height: auto; /* Mengatur tinggi agar sesuai konten */
+        text-align: left; /* Teks tetap rata kiri */
+        padding: 20px; /* Padding untuk jarak dari tepi */
+    }
+
+    .hero-content {
+        max-width: 100%; /* Teks memenuhi lebar layar */
+        padding-right: 0; /* Hilangkan jarak kanan pada teks */
+        margin-bottom: 20px; /* Tambah jarak bawah agar teks tidak terlalu dekat dengan gambar */
+        text-align: left; /* Pastikan teks tetap di kiri */
+        align-self: flex-start; /* Letakkan teks di kiri atas */
+    }
+
+    .hero-image {
+        margin-top: 20px; /* Tambahkan jarak antara teks dan gambar */
+    }
+
+    .hero-image img {
+        width: 100%; /* Gambar memenuhi lebar layar */
+        height: auto; /* Tinggi gambar mengikuti proporsi */
+    }
+}
+
+
+/* Teks pada Hero Section */
 .hero-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-family: 'Lora', serif; /* Font serif elegan */
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Menambahkan efek bayangan untuk teks */
 }
 
 .hero-section p {
-    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan pada teks */
 }
 
-.content-section {
-    padding: 50px 0;
-}
 
 /* Flexbox untuk Visi dan Misi */
 .visi-misi-container {
@@ -49,7 +104,6 @@ html {
     flex: 1;
 }
 
-/* Membatasi ukuran gambar */
 .visi-misi-container img {
     max-width: 100%;
     height: auto;
@@ -58,9 +112,10 @@ html {
 /* Media Query untuk tampilan mobile */
 @media (max-width: 768px) {
     .visi-misi-container {
-        flex-direction: column;  /* Menumpuk secara vertikal pada layar kecil */
-        align-items: center;     /* Mengatur posisi item ke tengah */
+        flex-direction: column; /* Menumpuk secara vertikal pada layar kecil */
+        align-items: center; /* Mengatur posisi item ke tengah */
     }
+
     .visi-misi-container .col-md-6 {
         width: 100%;  /* Mengatur lebar kolom menjadi 100% pada layar kecil */
         margin-bottom: 20px; /* Memberikan jarak antara Visi dan Misi */
@@ -89,7 +144,8 @@ html {
     color: #333;
 }
 
-.visi-misi-container p, .visi-misi-container ul {
+.visi-misi-container p,
+.visi-misi-container ul {
     line-height: 1.8;
     color: #555;
 }
@@ -126,6 +182,46 @@ html {
     font-size: 14px;
     color: #666;
     line-height: 1.6;
+}
+
+/* Styling untuk judul */
+#about h2 {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk paragraf */
+#about .lead {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+/* Menambahkan padding untuk kolom kiri agar lebih rapi */
+.content-section .col-md-6 {
+    padding: 20px;
+}
+
+/* Styling untuk gambar */
+#about .img-fluid {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
